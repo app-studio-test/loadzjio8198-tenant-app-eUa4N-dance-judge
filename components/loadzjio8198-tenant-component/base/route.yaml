@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadzjio8198-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadzjio8198-tenant-component
+    app.kubernetes.io/part-of: loadzjio8198-tenant-app
+  name: loadzjio8198-tenant-component
+  namespace: loadzjio8198-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadzjio8198-tenant-component
+    weight: null
+status: {}
